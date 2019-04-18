@@ -1,23 +1,14 @@
 package com.creation.patterns.singleton;
 
-class MyHome{
-    private static MyHome myHome = new MyHome();
-    private int room;
+public class MyHome {
 
-    private MyHome(){
-        this.room = 10;
+    private MyHome() {
+        System.out.println("Home is created!");
     }
 
-    public static MyHome getInstance(){
-        return myHome;
-    }
+    public static final MyHome INSTANCE = new MyHome();
 
-    public int getRoom(){
-        return room;
-    }
-
-    public void setRoom(int room){
-        this.room = room;
+    public void printName() {
+        System.out.println("I am a your  Home!");
     }
 }
-
